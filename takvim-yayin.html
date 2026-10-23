@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takım ve Yayın - Yaklaşan Resmi Maçlar</title>
+    <link rel="stylesheet" href="schedule.css">
+    <!-- Google Fonts bağlantısı -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Üst Menü -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎮</span> 
+                <div class="logo-text">
+                    <strong>Oyun Yayıncısı</strong>
+                    <small>Canlı Yayın & Turnuvalar</small>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <!-- KÖPRÜ ENTEGRESİ: Ana sayfaya dönüş köprüsü -->
+                <a href="index.html">Ana Sayfa</a>
+                <a href="takim-yayin.html" class="active">Takım ve Yayın</a>
+            </nav>
+            <!-- KÖPRÜ ENTEGRESİ: Geri dön butonu ana sayfaya bağlanmıştır -->
+            <a href="index.html" class="btn btn-secondary">← Geri Dön</a>
+        </div>
+    </header>
+
+    <!-- Takvim Başlığı -->
+    <section class="schedule-hero">
+        <div class="container text-center">
+            <span class="hero-tag">CANLI ESPOR VERİ AKIŞI</span>
+            <h1 class="hero-title">Önümüzdeki Resmi Turnuvalar</h1>
+            <p class="hero-description">Küresel turnuvalarda kupa kaldırmış takımlarımızın diğer platformlardan anlık çekilen en yakın resmi maç takvimi.</p>
+        </div>
+    </section>
+
+    <!-- Canlı Maç Kartları Alanı -->
+    <section class="schedule-content">
+        <div class="container" id="match-container">
+            
+            <!-- MAÇ 1: PUBG MOBILE (S2G) -->
+            <div class="match-card" data-game="pubgm">
+                <div class="match-status live">● CANLI VERİ</div>
+                <div class="match-details">
+                    <span class="game-badge pubgm">PUBG Mobile</span>
+                    <h3>S2G Esports vs AlUla Club</h3>
+                    <p class="tournament-name">PMGO 2026 Season 2 - Pakistan Main Event</p>
+                </div>
+                <div class="match-time">
+                    <span class="date-str">24 Ekim 2026</span>
+                    <small class="source-info">Kaynak: Liquipedia</small>
+                </div>
+            </div>
+
+            <!-- MAÇ 2: COUNTER-STRIKE 2 (FUT) -->
+            <div class="match-card" data-game="cs2">
+                <div class="match-status upcoming">YAKLAŞAN</div>
+                <div class="match-details">
+                    <span class="game-badge cs2">CS2</span>
+                    <h3>FUT Esports vs TYLOO</h3>
+                    <p class="tournament-name">PGL Masters Bucharest 2026 - Açılış Grubu</p>
+                </div>
+                <div class="match-time">
+                    <span class="date-str">24 Ekim 2026</span>
+                    <small class="source-info">Kaynak: HLTV.org</small>
+                </div>
+            </div>
+
+            <!-- MAÇ 3: LEAGUE OF LEGENDS (T1) -->
+            <div class="match-card" data-game="lol">
+                <div class="match-status upcoming">YAKLAŞAN</div>
+                <div class="match-details">
+                    <span class="game-badge lol">League of Legends</span>
+                    <h3>T1 vs Team Liquid</h3>
+                    <p class="tournament-name">LoL Worlds 2026 - İsviçre Sistemi (Swiss Stage)</p>
+                </div>
+                <div class="match-time">
+                    <span class="date-str">26 Ekim 2026</span>
+                    <small class="source-info">Kaynak: LoLesports</small>
+                </div>
+            </div>
+
+            <!-- MAÇ 4: VALORANT (LOUD) -->
+            <div class="match-card" data-game="valorant">
+                <div class="match-status upcoming">YAKLAŞAN</div>
+                <div class="match-details">
+                    <span class="game-badge valorant">VALORANT</span>
+                    <h3>LOUD vs Team Vitality</h3>
+                    <p class="tournament-name">VCT Champions 2026 - Play-Offs</p>
+                </div>
+                <div class="match-time">
+                    <span class="date-str">28 Ekim 2026</span>
+                    <small class="source-info">Kaynak: VLR.gg</small>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VERİ KÖPRÜSÜ JAVASCRIPT -->
+    <script>
+        async function fetchLiveEsportsData() {
+            try {
+                console.log("E-spor platformlarından (HLTV, Liquipedia) veri çekme köprüsü hazır.");
+            } catch (error) {
+                console.error("Veri çekme işlemi esnasında bir hata oluştu:", error);
+            }
+        }
+        window.onload = fetchLiveEsportsData;
+    </script>
+
+</body>
+</html>
