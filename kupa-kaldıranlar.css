@@ -1,0 +1,234 @@
+/* Genel Sıfırlama ve Font Ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-main: #0b061f;       /* Koyu lacivert/mor tema arka planı */
+    --bg-card: #130c2a;       /* Kart arka plan rengi */
+    --gold-color: #d4af37;    /* Altın vurgu rengi */
+    --text-white: #ffffff;
+    --text-muted: #a7a2c4;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Navigasyon Üst Menü */
+.main-header {
+    background-color: rgba(19, 12, 42, 0.95);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.logo-text small {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    display: block;
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--gold-color);
+    padding-bottom: 4px;
+}
+
+/* Hero Başlık Alanı */
+.arena-hero {
+    background: radial-gradient(circle at center, #231245 0%, #0b061f 100%);
+    padding: 80px 0 40px 0;
+}
+
+.hero-tag {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--gold-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Oyun Blokları ve İçerik */
+.arena-content {
+    padding-bottom: 80px;
+}
+
+.game-wrapper {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.game-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.game-genre {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Şampiyon Kart Tasarımı */
+.teams-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.champion-box {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.03) 0%, rgba(19, 12, 42, 0.5) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.25); /* Altın rengi çerçeve */
+    border-left: 5px solid var(--gold-color);    /* Sol tarafta kalın altın şerit */
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.champion-box:hover {
+    transform: translateX(5px);
+    border-color: var(--gold-color);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+}
+
+.trophy-icon {
+    font-size: 2.2rem;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-info strong {
+    font-size: 1.4rem;
+    color: var(--text-white);
+    font-weight: 700;
+}
+
+.tournament-title {
+    color: var(--gold-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.prize-tag {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+/* Ana Sayfaya Dön Butonunu İlk Görseldeki Gibi Kutu Yapma */
+.main-header .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: rgba(255, 255, 255, 0.03); /* Transparan iç dolgu */
+    color: #ffffff !important;                   /* Yazı rengi beyaz */
+    border: 1px solid rgba(255, 255, 255, 0.2);  /* İlk görseldeki gri çerçeve */
+    border-radius: 6px;                          /* Yumuşatılmış köşeler */
+    text-decoration: none !important;            /* Alt çizgiyi tamamen siler */
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* Üzerine gelindiğinde altındaki sarı çizginin çıkmasını kesin olarak engelleme */
+.main-header .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    text-decoration: none !important;
+}
+
+
+/* Responsive Düzenleme (Mobil Uyumluluk) */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .game-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .champion-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
