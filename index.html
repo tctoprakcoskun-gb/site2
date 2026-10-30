@@ -37,7 +37,8 @@
                 <a href="oyun-notlari.html">Oyun Notları</a>
                 <a href="index.html">İletişim</a>
             </nav>
-            <a href="kupa-kazananlar.html" class="btn btn-primary btn-join">Takıma Katıl</a>
+            <!-- 404 HATASINI ÖNLEYEN KESİN DÜZELTME: Kendi sayfana içeriden bağlanması için köprüyü ana sayfaya bağladık -->
+            <a href="#turnuva-alani" class="btn btn-primary btn-join">Takıma Katıl</a>
         </div>
     </header>
 
@@ -49,18 +50,18 @@
             <h1 class="hero-title">Rekabeti Yaşa, Yayını İzle, Takıma Katıl</h1>
             
             <!-- 2026 PMGC TURNUVA BİLGİ ALANI -->
-            <div class="tournament-announcement" style="margin: 20px 0; padding: 15px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.1);">
+            <div id="turnuva-alani" class="tournament-announcement" style="margin: 20px 0; padding: 15px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.1);">
                 <h2 style="font-size: 1.8rem; color: var(--primary-color); font-weight: 700;">Önümüzdeki En Yakın Turnuva</h2>
                 <h3 style="font-size: 1.4rem; color: #ffffff; margin-top: 5px; font-weight: 600;">PMGC 2026</h3>
                 <p style="font-size: 1rem; color: var(--text-muted); font-style: italic;">(Pubg Mobile Global Championship)</p>
             </div>
 
             <p class="hero-description">
-                E-spor takımımızı, canlı yayın takvimimizi, turnuva sonuçlarımızı ve topluluğumuzu tanıtıyoruz. 
+                E-spor takımımızı, canlı yayın takvimimizi, turnuva sonuçlarimizi ve topluluğumuzu tanıtıyoruz. 
                 Takım başvurusu ve sponsorluk talepleri için iletişim formunu kullanın.
             </p>
             <div class="hero-buttons">
-                <a href="kupa-kazananlar.html" class="btn btn-primary">Takıma Katıl</a>
+                <a href="#turnuva-alani" class="btn btn-primary">Takıma Katıl</a>
                 <a href="takim-yayin.html" class="btn btn-secondary">Maçlar</a>
             </div>
         </div>
@@ -78,7 +79,6 @@
             <div class="feature-card highlighted">
                 <h3 style="font-size: 1.6rem; color: #ffffff;">Global Arena</h3>
                 <p style="margin-top: 5px; color: var(--text-muted); font-weight: 600;">Ev Sahibi Ülke</p>
-                <p style="margin-top: 4px; color: var(--text-muted) font-weight 500;">Türkiye</p>
             </div>
             <!-- KUTUCUK 3: RESMİ TARİHLER -->
             <div class="feature-card">
